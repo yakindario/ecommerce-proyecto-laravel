@@ -31,5 +31,10 @@ class CreateNewUser implements CreatesNewUsers
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
         ]);
+        /**
+         * Se agrega el rol customer, como defecto a los nuevos usarios 
+         */
+        $user->assignRole('customer');
+        return $user;
     }
 }
