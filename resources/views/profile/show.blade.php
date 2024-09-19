@@ -1,3 +1,4 @@
+{{-- @dd($user->address) --}}
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -17,6 +18,9 @@
                 <div class="mt-10 sm:mt-0">
                     @livewire('profile.update-password-form')
                 </div>
+
+                <x-section-border />
+                @livewire('profile.address-user')
 
                 <x-section-border />
             @endif

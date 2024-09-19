@@ -21,6 +21,12 @@ class User extends Authenticatable
     use TwoFactorAuthenticatable;
     use HasRoles; // se agrega el trait para el manejo de roles
 
+    // Relación uno a uno
+    public function address()
+    {
+        return $this->hasOne(Address::class);
+    }
+
     /**
      * The attributes that are mass assignable.
      *
