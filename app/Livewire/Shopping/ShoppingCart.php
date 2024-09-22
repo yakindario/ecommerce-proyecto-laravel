@@ -53,6 +53,19 @@ class ShoppingCart extends Component
             return $item['price'] * $item['quantity'];
         }, $this->cart));
     }
+    public function proceedToCheckout()
+    {
+        // dd('Proceder al checkout');
+        // Guardar la información del carrito y el total en la sesión
+        session([
+            'cart' => $this->cart,
+            'total' => $this->totalPrice,  // Asegurar que la clave es 'total'
+            'item_count' => $this->itemCount,
+        ]);
+
+        // Redirigir al controlador del checkout
+        return redirect()->route('checkout');
+    }
 
     public function render():mixed
     {

@@ -44,7 +44,6 @@ class ProductsUpdate extends Component
         ]);
 
         $product = Product::find($this->product['id']);
-        // dd($product);
 
         if ($this->image) {
             $product->image = $this->image->store('images', 'public');
@@ -59,7 +58,6 @@ class ProductsUpdate extends Component
 
         // Mostrar mensaje de éxito
         session()->flash('status', 'Producto creado... .'); 
-
         // Redirige a la lista de productos
         return $this->redirect(route('products.index'));
     }

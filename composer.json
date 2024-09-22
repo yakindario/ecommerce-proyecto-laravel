@@ -12,6 +12,7 @@
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.0",
         "livewire/volt": "^1.6",
+        "mercadopago/dx-php": "3.0.6",
         "spatie/laravel-permission": "^6.9"
     },
     "require-dev": {

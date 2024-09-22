@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Product\ProductCreate;
 use App\Livewire\Product\ProductsIndex;
 use App\Livewire\Product\ProductsUpdate;
+use App\Models\Order;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,4 +23,9 @@ Route::middleware([
     Route::get('/products', ProductsIndex::class)->name('products.index');
     Route::get('/products/create', ProductCreate::class)->name('products.create');
     Route::get('/products/update/{id}', ProductsUpdate::class)->name('products.update');
+
+    Route::get('/orders',[OrderController::class,'index'])->name('checkout');
+    Route::resource('orders', OrderController::class)->only('store');
+    Route::get('callback/{order:uuid}', [OrderController::class, 'callback'])->name('config');
+
 });
