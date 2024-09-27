@@ -171,6 +171,11 @@
                                     {{ __('Profile') }}
                                 </x-dropdown-link>
 
+                                {{-- mis ordenes  --}}
+                                <x-dropdown-link href="{{ route('myorder') }}">
+                                    {{ __('Mi Ordenes') }}
+                                </x-dropdown-link>
+
                                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                     <x-dropdown-link href="{{ route('api-tokens.index') }}">
                                         {{ __('API Tokens') }}

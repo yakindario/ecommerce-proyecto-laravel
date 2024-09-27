@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\OrderController;
+use App\Livewire\Order\MyOrder;
+use App\Livewire\Order\OrderList;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Product\ProductCreate;
 use App\Livewire\Product\ProductsIndex;
@@ -28,4 +30,6 @@ Route::middleware([
     Route::resource('orders', OrderController::class)->only('store');
     Route::get('callback/{order:uuid}', [OrderController::class, 'callback'])->name('config');
 
+    Route::get('/admin/orders',OrderList::class)->name('admin.orders');
+    Route::get('/order',MyOrder::class)->name('myorder');
 });
