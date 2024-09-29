@@ -16,7 +16,7 @@
     <div x-show="open" @click.away="open = false"
         class="absolute right-0 mt-2 w-80 bg-white rounded-md shadow-lg z-50">
         <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">Cart Summary</h3>
+            <h3 class="text-lg font-semibold mb-2">Total:</h3>
             @if (count($cart) > 0)
                 <ul class="divide-y divide-gray-200">
                     @foreach ($cart as $item)
@@ -49,7 +49,7 @@
                 <!-- Botón para ver el carrito completo -->
                 <button wire:click="proceedToCheckout"
                     class="mt-4 block w-full bg-indigo-600 text-white text-center py-2 px-4 rounded-md hover:bg-indigo-700 transition duration-300 ease-in-out">
-                    View Full Cart
+                    Pagar
                 </button>
             @else
                 <p class="text-gray-500">Your cart is empty.</p>

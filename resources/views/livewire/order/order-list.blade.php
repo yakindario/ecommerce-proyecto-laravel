@@ -1,7 +1,7 @@
 <div class="container mx-auto px-4 sm:px-8">
     <div class="py-8">
         <div class="flex flex-col md:flex-row justify-between">
-            <h1 class="text-2xl font-semibold leading-tight mb-4 md:mb-0">Orders List</h1>
+            <h1 class="text-2xl font-semibold leading-tight mb-4 md:mb-0">Las ordenes</h1>
         </div>
         <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
             <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">

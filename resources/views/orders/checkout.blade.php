@@ -7,12 +7,12 @@
             <div class="p-6">
                 <div class="py-5 text-center">
                     <h2 class="text-2xl font-bold mb-2">Checkout</h2>
-                    <p class="text-gray-600">REVIEW YOUR ORDER</p>
+                    <p class="text-gray-600">Resumen de tu Orden</p>
                 </div>
                 <div class="flex flex-wrap -mx-4">
                     <div class="w-full md:w-1/3 px-4 mb-4">
                         <h4 class="flex justify-between items-center mb-3">
-                            <span class="text-gray-600">Your cart</span>
+                            <span class="text-gray-600">Producto:</span>
                             <span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">3</span>
                         </h4>
                         <ul class="bg-white rounded-lg shadow-md divide-y divide-gray-200 mb-3 sticky top-0">

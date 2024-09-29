@@ -20,7 +20,7 @@
                         </div>
                         <button wire:click="addToCart({{ $product->id }})"
                             class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition duration-300 ease-in-out transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Add to Cart
+                            Agregar al carrito
                         </button>
                     </div>
                 </div>
