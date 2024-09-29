@@ -10,7 +10,7 @@ use App\Livewire\Product\ProductsUpdate;
 use App\Models\Order;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 
 Route::middleware([
