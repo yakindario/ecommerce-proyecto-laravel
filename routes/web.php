@@ -21,15 +21,22 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-    // products
-    Route::get('/products', ProductsIndex::class)->name('products.index');
-    Route::get('/products/create', ProductCreate::class)->name('products.create');
-    Route::get('/products/update/{id}', ProductsUpdate::class)->name('products.update');
-
+    
     Route::get('/orders',[OrderController::class,'index'])->name('checkout');
     Route::resource('orders', OrderController::class)->only('store');
     Route::get('callback/{order:uuid}', [OrderController::class, 'callback'])->name('config');
 
-    Route::get('/admin/orders',OrderList::class)->name('admin.orders');
     Route::get('/order',MyOrder::class)->name('myorder');
+});
+
+// Middleware for role Authorization
+
+Route::group([
+    'middleware' => ['role:admin'],
+], function () {
+    // products
+    Route::get('/products', ProductsIndex::class)->name('products.index');
+    Route::get('/products/create', ProductCreate::class)->name('products.create');
+    Route::get('/products/update/{id}', ProductsUpdate::class)->name('products.update');
+    Route::get('/admin/orders',OrderList::class)->name('admin.orders');
 });
